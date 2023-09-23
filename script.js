@@ -67,7 +67,7 @@ function displayAge() {
             valid = false;
         } else {
             dayInvalid.style.display = "none";
-            inputDayclassList.remove("invalid");
+            inputDay.classList.remove("invalid");
             validCounter ++;
         }
 

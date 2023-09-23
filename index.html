@@ -17,28 +17,38 @@
 <body>
   <main>
     <div class="component">
-      <div class="input-section">
+      <!-- <form name="birthdate" action=""> -->
+        <div class="input-section">
 
-        <div class="input-item">
-          <label for="day"><h3>Day</h3></label>
-          <input type="text" id="day" name="day" placeholder="DD">
-        </div>
-  
-        <div class="input-item">
-          <label for="month"><h3>Month</h3></label>
-          <input type="text" id="month" name="month" placeholder="MM">
-        </div>
-  
-        <div class="input-item">
-          <label for="year"><h3>Year</h3></label>
-          <input type="text" id="year" name="year" placeholder="YYYY">
-        </div>
-  
+          <div class="input-item" id="input-day">
+            <label for="day"><h3>Day</h3></label>
+            <input type="text" id="day" name="day" placeholder="DD" required>
+            <p id="day-required" class="required-message">This field is required</p>
+            <p id="day-invalid" class="invalid-message">Must be a valid day</p>
+            <p id="date-invalid" class="invalid-message">Must be a valid date</p>
+          </div>
+    
+          <div class="input-item" id="input-month">
+            <label for="month"><h3>Month</h3></label>
+            <input type="text" id="month" name="month" placeholder="MM" required>
+            <p id="month-required" class="required-message">This field is required</p>
+            <p id="month-invalid" class="invalid-message">Must be a valid month</p>
+          </div>
+    
+          <div class="input-item" id="input-year">
+            <label for="year"><h3>Year</h3></label>
+            <input type="text" id="year" name="year" placeholder="YYYY" required>
+            <p id="year-required" class="required-message">This field is required</p>
+            <p id="year-invalid" class="invalid-message">Must be in the past</p>
+          </div>
+
       </div>
+      <!-- </form> -->
+
   
       <div class="submit-section">
         <div class="separator"></div>
-        <img class="arrow-icon" src="./assets/images/icon-arrow.svg" alt="Icon of an arrow pointing downwards">
+        <img id="submit-btn" class="arrow-icon" src="./assets/images/icon-arrow.svg" alt="Icon of an arrow pointing downwards">
       </div>
   
       <div class="results-section">
@@ -68,5 +78,7 @@
       Coded by <a href="https://github.com/FazleLabib">Fazle Labib</a>.
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

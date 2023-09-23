@@ -63,18 +63,22 @@ function displayAge() {
         // checks if day is valid
         if (day < 1 || day > 31) {
             dayInvalid.style.display = "block";
+            inputDay.classList.add("invalid");
             valid = false;
         } else {
             dayInvalid.style.display = "none";
+            inputDayclassList.remove("invalid");
             validCounter ++;
         }
 
         // checks if month is valid
         if (month < 1 || month > 12) {
             monthInvalid.style.display = "block";
+            inputMonth.classList.add("invalid");
             valid = false;
         } else {
             monthInvalid.style.display = "none";
+            inputMonth.classList.remove("invalid");
             validCounter++;
         }
 
@@ -86,14 +90,19 @@ function displayAge() {
         if (birthDate > currentDate) {
             yearInvalid.style.display = "block";
             dateInvalid.style.display = "none";
+            inputYear.classList.add("invalid");
             valid = false;
         } else if (birthDate.getDate() !== day || birthDate.getMonth() !== month - 1) {
             dateInvalid.style.display = "block";
             yearInvalid.style.display = "none";
+            inputDay.classList.add("invalid");
+
             valid = false;
         } else {
             dateInvalid.style.display = "none";
             yearInvalid.style.display = "none";
+            inputDay.classList.remove("invalid");
+            inputYear.classList.remove("invalid");
             validCounter++;
         }
     }
